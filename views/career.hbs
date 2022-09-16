@@ -1,0 +1,337 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"> </script>
+    <style>
+    table {
+    counter-reset: tableCount;    
+           font-family: Arial;
+        }
+.counterCell:before {              
+    content: counter(tableCount); 
+    counter-increment: tableCount; 
+}
+        
+
+            
+            #menu{
+                display: flex;
+                background-color: #7896c7;
+                text-align:center;
+                border-radius:4px 8px 0px 0px;
+                box-shadow: 0px 2px 1px rgba(10, 10, 10, 0.5);
+
+                position: fixed; 
+                top: 0;
+                left:0;
+                width: 100%; 
+
+                padding: 0px;
+
+
+
+            }
+            #accountPic{
+                position:relative;
+                top:1px;
+                right:1px;
+                border-radius: 30px;
+                margin-top: 0px;
+                margin-bottom: 5px;
+               
+
+
+            }
+             .homeul{
+                margin: auto;
+                border: 5px;
+                padding: 5px;
+            }
+
+            .home{
+                font-family: "Helvetica", arial, sans-serif;
+                font-size: 25px;
+                display: inline-block;
+                padding:10px;
+                text-decoration-color:yellow;
+                background-color: rgb(255, 255, 255, 0.5);
+                color: #2e466e;
+                border-radius: 5px;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .home:hover{
+                box-shadow: 0.5px 0.5px #0d0d93;
+                background-color: #2BADE1;
+            }
+            input[type=submit]{
+                -moz-box-shadow:inset 0px 0px 15px 3px #23395e;
+	            -webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
+	            box-shadow:inset 0px 0px 15px 3px #23395e;
+	            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+	            background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+	            background-color:#2e466e;
+	            -moz-border-radius:17px;
+	            -webkit-border-radius:17px;
+	            border-radius:17px;
+	            border:1px solid #1f2f47;
+	            display:block;
+	            cursor:pointer;
+	            color:#ffffff;
+	            font-family:Arial;
+	            font-size:15px;
+	            padding:4px 30px;
+	            text-decoration:none;
+	            text-shadow:0px 1px 0px #263666;
+            }
+            input[type=submit]:hover{
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+	            background:-moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-o-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+	            background-color:#415989;
+            }
+            #content{
+   
+
+                margin-top: 95px;
+                margin-left: 0px;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            #spacing{
+                border-bottom: 50;
+                 
+                overflow: hidden;
+            }
+        input[type=delete]{
+                -moz-box-shadow:inset 0px 0px 15px 3px #810815;
+                -webkit-box-shadow:inset 0px 0px 15px 3px #810815;
+                box-shadow:inset 0px 0px 15px 3px #C91E2F;
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #C91E2F), color-stop(1, #FF0821));
+                background:-moz-linear-gradient(top, #C91E2F 5%, #FF0821 100%);
+                background:-webkit-linear-gradient(top, #C91E2F 5%, #FF0821 100%);
+                background:-o-linear-gradient(top, #C91E2F 5%, #FF0821 100%);
+                background:-ms-linear-gradient(top, #C91E2F 5%, #FF0821 100%);
+                background:linear-gradient(to bottom, #C91E2F 5%, #FF0821 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#C91E2F', endColorstr='#FF0821',GradientType=0);
+                background-color:#C91E2F;
+                -moz-border-radius:17px;
+                -webkit-border-radius:17px;
+                border-radius:10px;
+                width: 60px;
+                border:1px solid #1f2f47;
+                display:inline-block;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:12px;
+                padding:3px 5px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #263666;
+            }
+            input[type=delete]:hover{
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #FF0821), color-stop(1, #C91E2F));
+	            background:-moz-linear-gradient(top, #FF0821 5%, #C91E2F 100%);
+	            background:-webkit-linear-gradient(top, #FF0821 5%, #C91E2F 100%);
+	            background:-o-linear-gradient(top, #FF0821 5%, #C91E2F 100%);
+	            background:-ms-linear-gradient(top, #FF0821 5%, #C91E2F 100%);
+	            background:linear-gradient(to bottom, #FF0821 5%, #C91E2F 100%);
+	            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0821', endColorstr='#C91E2F',GradientType=0);
+                background-color:#FF0821}
+        
+                .careerfont{
+            font-family: Arial;
+                    
+        }
+        .bgcolor{
+           background-color: #23395e;
+        }
+        .bgcolor2{
+            background-color: #7896c7;
+        }
+        .whitetext{
+            color: white;
+        };
+    </style>
+    
+    
+    <script>
+        $(document).ready(()=>{
+            $("#Home").click(function(){
+                $("#homeform").submit()
+            })
+            
+            $("#Career").click(function(){
+                $("#careerform").submit()
+            })
+            
+     
+        })
+        
+        
+      
+    </script>
+</head>
+
+<body>
+    
+    <div id="menu">
+        
+            <ul class='homeul'>
+               <li id="Home" class='home'> Home</li>
+                <li id="Career" class='home'> Career</li>
+     
+              
+            </ul>
+        
+        
+        <div>   <img id= 'accountPic' src="/accountpic.png" alt='pictureofme' height='45' width="45" >
+
+            <form action="logout" method="POST">
+                <input type="submit" id="logout" Value="Log out">
+            </form>
+             
+        </div>
+
+    </div>
+
+    <div id="spacing"></div>
+    
+    <div id="content" style = "display: flex; flex-direction: column">
+        
+        <div>
+       
+                 <form action="addcareer" method="POST" id="addCareer">
+            <table style="text-align: center; border-collapse: separate; border-spacing: 20" align = center border = 1>
+                    <tr>
+                    <td colspan = 6 class='bgcolor'><h1 class='whitetext'> Career Objectives </h1></td>
+                            
+                </tr>
+                <tr class='whitetext'>
+                <td colspan class='bgcolor2' ><h3 > ID </h3></td>
+                      <td colspan class='bgcolor2'><h3> Name </h3></td>
+                      <td colspan class='bgcolor2'><h3> Description </h3></td>
+                      <td colspan class='bgcolor2' ><h3> Reason Target Date </h3></td>
+                      <td colspan class='bgcolor2'><h3> Completed Date </h3></td>
+                </tr>
+                
+                      {{#each career}}
+        <tr data-id="{{_id}}" class= "counterCell">
+          
+                <td>{{name}} </td>
+              <td>{{description}} </td>
+              <td>{{reason_target_date}} </td>
+                 <td>{{completed_date}} </td>
+              <td><input type="delete" data-id="{{_id}}" value="Remove" class="del" style =' border= 0'> </td>
+           
+            </tr>
+                   {{/each}}
+                 <tr  class= "counterCell" style='border=0'>
+                  
+                    <td><input type = "text" placeholder = "Input Objective Name" name= "name"></td>
+                      <td>
+                     <textarea rows = "3" cols = "80" name = "description" placeholder="Input Objective Description..."></textarea>
+                        </td>
+                    <td><input type = "date" placeholder = "targetDate"  data-date-split-input="true" name= "targetDate"></td>
+                    <td><input type = "date" placeholder = "completedDate"  data-date-split-input="true" name = "completedDate"></td>
+                       <td><input type="submit" value="Add Entry" onclick="submit()"></td>
+                </tr>
+            
+         
+            </table>
+                 
+<br>
+          
+           
+                     
+            
+    
+
+            
+
+            
+                  
+                  
+                
+             
+        
+            
+   
+       
+          </form>  
+              </div>
+    
+   
+    </div>
+    
+     <form action="renderHome" id = "homeform"></form>
+    <form action="rendercareer"  id = "careerform"></form>
+
+    
+    </body>
+    
+      <script>
+    
+      $(document).ready(()=>{
+      
+
+        function submit(){
+               console.log('itworked yay')
+              $("#addCareer").submit()
+              
+              
+              
+          }
+          
+          
+             $(".del").click(function(){
+            let id = $(this).attr("data-id")
+      
+            $.ajax({
+                url: "deletecareer",
+                method : "POST",
+                data : {
+                    
+                    id: id
+                },
+                success : function(result){
+                  
+                        alert("Successfully Deleted")
+                        // TODO : Remove deleted Html
+                        // delete or remove row
+                        // get data id for td
+                        
+                      $("tr[data-id='" + id + "']").remove()
+                 
+                        
+                }
+                
+            })
+            
+     
+            
+            
+        })
+    
+            
+       })
+                 
+                 
+                 
+            
+    </script>
+    
+   
+
+</html>

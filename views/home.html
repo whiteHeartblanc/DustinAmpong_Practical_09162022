@@ -1,0 +1,468 @@
+<html lang='en'>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"> </script>
+    <meta charset='utf-8' />
+    <style>
+        
+            #menu{
+                display: flex;
+                background-color: #7896c7;
+                text-align:center;
+                border-radius:4px 8px 0px 0px;
+                box-shadow: 0px 2px 1px rgba(10, 10, 10, 0.5);
+
+                position: fixed; 
+                top: 0;
+                left:0;
+                width: 100%; 
+
+                padding: 0px;
+
+
+
+            }
+            #accountPic{
+                position:relative;
+                top:1px;
+                right:1px;
+                border-radius: 30px;
+                margin-top: 0px;
+                margin-bottom: 5px;
+               
+
+
+            }
+             .homeul{
+                margin: auto;
+                border: 5px;
+                padding: 5px;
+            }
+
+            .home{
+                font-family: "Helvetica", arial, sans-serif;
+                font-size: 25px;
+                display: inline-block;
+                padding:10px;
+                text-decoration-color:yellow;
+                background-color: rgb(255, 255, 255, 0.5);
+                color: #2e466e;
+                border-radius: 5px;
+                margin-left: 30px;
+                  margin-right: 30px;
+            }
+
+            .home:hover{
+                box-shadow: 0.5px 0.5px #0d0d93;
+                background-color: #2BADE1;
+            }
+            input[type=submit]{
+                -moz-box-shadow:inset 0px 0px 15px 3px #23395e;
+	            -webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
+	            box-shadow:inset 0px 0px 15px 3px #23395e;
+	            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+	            background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+	            background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+	            background-color:#2e466e;
+	            -moz-border-radius:17px;
+	            -webkit-border-radius:17px;
+	            border-radius:17px;
+	            border:1px solid #1f2f47;
+	            display:block;
+	            cursor:pointer;
+	            color:#ffffff;
+	            font-family:Arial;
+	            font-size:15px;
+	            padding:4px 30px;
+	            text-decoration:none;
+	            text-shadow:0px 1px 0px #263666;
+            }
+            input[type=submit]:hover{
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+	            background:-moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-o-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:-ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+	            background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+	            background-color:#415989;
+            }
+            #content{
+   
+
+                margin-top: 95px;
+                margin-left: 0px;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            #spacing{
+                border-bottom: 50;
+                 
+                overflow: hidden;
+            }
+        .float-childleft {
+                width: 20%;
+                float: left;
+                padding: 20px;
+                
+            }      
+          .float-childright {
+                width:70%;
+                float: right;
+                padding: 50px;
+                
+            }
+         #content2{
+   
+
+                margin-left: 0px;
+                margin-bottom: 0px;
+                background-color: white;
+                overflow: hidden;
+            }
+        .float-childright2 {
+                width: 20%;
+                float: right;
+                padding: 10px;
+                
+            }      
+          .float-childleft2 {
+                width:60%;
+                float: left;
+                padding: 50px;
+                
+            }
+        
+          #content3{
+   
+
+                margin-left: 0px;
+                margin-bottom: 0px;
+                background-color: white;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+            .float-childright3 {
+                width: 45%;
+                float: right;
+                 padding: 5px;
+                margin-right: 50px
+              
+                
+            }      
+          .float-childleft3 {
+                width:45%;
+                float: left;
+               padding: 5px;
+                 margin-left: 50px
+                
+                
+            }
+        body{
+            margin: 0;
+            background-color: white;
+        }
+        .aboutme{
+            color: black;
+            font-family: Arial;
+            font-size: 24;
+        }
+        #WorkandOjt{
+            background-color: #2e466e;
+            margin-top: 0px;
+             overflow: hidden;
+         
+        }
+        .centerlists{
+                display: flex;
+                justify-content: center;
+            
+        }
+        .column {
+            float: left;
+            width: 25%;
+            background-color: white;
+
+        }
+
+/* Clear floats after the columns */
+        .content4:after {
+            background-color: white;
+            overflow: hidden;
+            margin-top: 0px;
+            display: table;
+            clear: both;
+        };
+
+      
+    </style>
+
+     <script>
+        $(document).ready(()=>{
+            $("#Home").click(function(){
+                $("#homeform").submit()
+            })
+            
+            $("#Career").click(function(){
+                $("#careerform").submit()
+            })
+      
+        })
+    </script>    
+
+</head>
+
+<body>
+    
+    <div id="menu">
+            <ul class='homeul'>
+               <li id="Home" class='home'> Home</li>
+                <li id="Career" class='home'> Career</li>
+        
+            </ul>
+
+     
+        
+        <div>   
+             <img id= 'accountPic' src="/accountpic.png" alt='pictureofme' height='45' width="45" >
+      
+            <form action="logout" method="POST">
+                <input type="submit" id="logout" Value="Log out">
+            </form>
+             
+             
+
+        </div>
+
+    </div>
+     
+      
+
+    <div id="spacing"></div>
+    
+    <div id="content">
+        
+        <div class='float-childleft'>
+       <img src="/Ampong_2x2.jpg" width='300' height= '300' alt='pictureofme' style='margin-top: 30px; ' >
+            </div>
+        <div class='float-childright' >
+            <h1 style="font-family: Arial; background-color: #2e466e; color: white; text-align: center" >
+                About Me
+            </h1>
+            <p class='aboutme'>
+            I am Dustin Allen Crisologo Ampong, I am Filipino of 23 years of Age. I was born on May 8, 1999. <br>
+                I am Fluent in Filipino and English, <br>
+                My interest include Problem Solving, Learning new skills and knowledge and developing usable software that interest me. <br>
+               You may contact me using any of the following:
+           
+            
+            
+            </p>
+             <ul class='aboutme' >
+                <li>
+                    dustin.ampong@gmail.com
+                    
+                </li>
+                <li>
+                    +6346 440 9302
+                    
+                </li>
+                <li>
+                    +63 9175690508
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+      <div id="content2">
+        
+        <div class='float-childright2'>
+       <img src="/objectivepic.png" width='350' height= '300' alt='pictureofme' style='margin-top: 30px; ' >
+            </div>
+        <div class='float-childleft2' >
+           <h1 style="font-family: Arial; background-color: #2e466e; color: white; text-align: center" >
+                My Objective in Finding a Job
+            </h1>
+            <p class='aboutme'>
+          To be able to learn and hone my skills as a Computer Scientist in an organization while contributing to its overall success in various
+                scenarios and situations.
+            
+            
+            </p>
+
+        </div>
+          
+        
+      
+        
+    </div>
+    <div id="WorkandOjt">
+          <h1 style='font-family: Arial; text-align: center; color: white;'>
+        Education / OJT Work Experience
+        </h1> 
+    </div>
+    <div id="content3">
+        
+      <div class='float-childleft3'>
+          <div style='display: flex ; justify-content: center;'>
+       <img src="/dlsu.png" width='200' height= '200' alt='pictureofme' style='margin-top: 30px; ' >
+              </div>
+             <p class='aboutme'>
+         I Studied Computer Science in De La Salle University for 5 years and earned a Bachelor of Science degree in it. I was also consistent honors student having
+                 10 out of 13 terms as a Dean's Lister. My groups Thesis was nominated for Most Outstanding Thesis Awards for undergraduates.
+            
+            
+            </p>
+            </div>
+        <div class='float-childright3' >
+              <div style='display: flex ; justify-content: center;'>
+              <img src="/gsi.png" width='200' height= '200' alt='pictureofme' style='margin-top: 30px; align-content: center' >
+            </div>
+            <p class='aboutme'>
+                For my OJT I worked under Global Sapphire Inc. I spent a few months here and was able to hone my skills in Data Science specifically in Machine learning and Data Analysis. I learned how to use the Greenplum database and how to use PowerBi in Visualizing Data.
+            
+            
+            </p>
+       
+    </div>
+    </div>
+    
+          <div id="WorkandOjt">
+          <h1 style='font-family: Arial; text-align: center; color: white;'>
+        Skills, Knowledges and Personal Traits
+        </h1>
+              <p class='aboutme'  style='font-family: Arial; text-align: center; color: white;'>
+                  Below are my lists of skills in programming, Experiences with different technologies, knowledges about computer science concepts and some languages, and lastly my own personal traits.
+              </p>
+           
+    </div>
+
+       
+    <div class="content4">
+        
+  <div class="column">
+       <h2 style='font-family: Arial; text-align: center'>
+      SKILLS
+      </h2>
+             <div class='centerlists'>
+               <ul class='aboutme' >
+                <li>
+                    Java
+                    
+                </li>
+                <li>
+                    C, C++
+                    
+                </li>
+                <li>
+                    Javascript
+                    
+                </li>
+                   <li>
+                   Python
+                   </li>
+            </ul>
+      </div>
+        
+        </div>
+<div class="column">
+       <h2 style='font-family: Arial; text-align: center'>
+         Experience
+      </h2>
+    
+              <div class='centerlists'>    
+               <ul class='aboutme' >
+                <li>
+                    Database Design SQL and No SQL
+                    
+                </li>
+                <li>
+                    Front end and back end web development
+                    
+                </li>
+                <li>
+                    Software developing team with iterating roles
+                    
+                </li>
+                   <li>
+                    Greenplum Database for Machine Learning
+                   </li>
+                   <li>
+                    Power Bi for data analytics
+                   </li>
+            </ul>
+    </div>
+        
+        </div>
+        
+  <div class="column">
+     <h2 style='font-family: Arial; text-align: center'>
+          Knowledges
+      </h2>
+            <div class='centerlists'>
+                     <ul class='aboutme' >
+                <li>
+                   Software Design patterns
+                    
+                </li>
+                <li>
+                   Data Science concepts
+                    
+                </li>
+                <li>
+                    Machine Learning Concepts
+                    
+                </li>
+                   <li>
+                    Dart Langauge and mobile development
+                   </li>
+                  
+            </ul>
+      </div>
+        
+        </div>
+  <div class="column">
+       <h2 style='font-family: Arial; text-align: center'>
+      Personal Traits
+      </h2>
+       <div class='centerlists'>
+            <ul class='aboutme' >
+                <li>
+                   Action Oriented
+                    
+                </li>
+                <li>
+                    Results Driven
+                    
+                </li>
+                <li>
+                    Agile
+                    
+                </li>
+                   <li>
+                     Highly Collaborative
+                   </li>
+                 
+            </ul>
+        </div>
+        
+        </div>
+</div>
+    
+   
+    
+    
+     <form action="renderHome" id = "homeform"></form>
+    <form action="rendercareer"  id = "careerform"></form>
+ 
+    </body>
+   
+
+</html>
